@@ -28,7 +28,6 @@
 
         <div class="alert alert-success mb-3" role="alert">
             <p>BMSに出てくるデカ乳をまとめた表。</p>
-            <p>難易度表の読み込みと表示に数秒かかります。</p>
             <hr>
             <p class="mb-0">情報提供は⇒<a href="https://docs.google.com/forms/d/e/1FAIpQLSfWdDGwiqXhpX2Gp6K_T-6ZJVG--m9WUR0Qli2YVXjWUSAtmw/viewform?usp=publish-editor" target="blank">こちら</a></p>
         </div>
@@ -55,7 +54,7 @@
                 var obj = $("#table_int");
 
                 obj.html("");
-                $("<thead class='table-dark'><tr><th>Level</th><th>Title</th><th>Artist</th><th>Comment</th></tr></thead><tbody>")
+                $("<thead class='table-dark'><tr><th>サイズ</th><th>Title</th><th>Artist</th><th>Comment</th></tr></thead><tbody>")
                     .appendTo(obj);
                 var obj_sep = null;
                 for (var i = 0; i < info.length; i++) {
@@ -77,16 +76,16 @@
                     $("<td width='5%'>" + mark + x + "</td>").appendTo(str);
 
                     // Title
-                    $("<td width='45%'>" +
+                    $("<td width='35%'>" +
                         "<a href='http://www.dream-pro.info/~lavalse/LR2IR/search.cgi?mode=ranking&bmsmd5=" + info[
                             i]
                         .md5 + "' target='_blank'>" + info[i].title + "</a></td>").appendTo(str);
 
                     // Artist
-                    $("<td width='40%'>" + info[i].artist + "</td>").appendTo(str);
+                    $("<td width='35%'>" + info[i].artist + "</td>").appendTo(str);
 
                     // Comment
-                    $("<td width='10%'>" + info[i].comment + "</td>").appendTo(str);
+                    $("<td width=25%'>" + info[i].comment + "</td>").appendTo(str);
                     str.appendTo(obj);
                     count++;
 
